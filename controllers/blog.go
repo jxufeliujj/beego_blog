@@ -72,6 +72,7 @@ func (c *BlogController) Home()  {
  */
 func (c *BlogController) Article() {
 	c.list()
+	c.Data["preTitle"] = "文章"
 	c.TplName = c.controllerName+ "/article.html"
 }
 
@@ -97,6 +98,7 @@ func (c *BlogController) Detail()  {
 		c.Data["hosts"] = hosts
 
 	}
+	c.Data["preTitle"] = "详情"
 	c.TplName = c.controllerName+ "/detail.html"
 }
 
@@ -107,6 +109,7 @@ func (c *BlogController) About()  {
 	post := models.Post{Id:1}
 	c.o.Read(&post)
 	c.Data["post"] = post
+	c.Data["preTitle"] = "关于"
 	c.TplName = c.controllerName + "/about.html"
 }
 
