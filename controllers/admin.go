@@ -235,9 +235,9 @@ func (c *AdminController) CategorySave() {
 	id := c.Input().Get("id")
 	category := models.Category{}
 	category.Name = name
+	category.Created = time.Now()
+	category.Updated = time.Now()
 	if id == "" {
-		category.Created = time.Now()
-		category.Updated = time.Now()
 		if _, err := c.o.Insert(&category); err != nil {
 			c.History("插入数据错误", "")
 		} else {
