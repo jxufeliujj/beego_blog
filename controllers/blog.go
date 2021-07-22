@@ -115,12 +115,14 @@ func (c *BlogController) About()  {
 
 //时间线
 func (c *BlogController) Timeline()  {
+	c.Data["preTitle"] = "点滴"
 	c.TplName = c.controllerName + "/timeline.html"
 }
 
 //资源
 func (c *BlogController) Resource()  {
 	c.list()
+	c.Data["preTitle"] = "资源"
 	c.TplName = c.controllerName + "/resource.html"
 }
 
