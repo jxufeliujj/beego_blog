@@ -239,7 +239,6 @@ func (c *AdminController) CategorySave() {
 		category.Created = time.Now()
 		category.Updated = time.Now()
 		if _, err := c.o.Insert(&category); err != nil {
-			fmt.Println(err)
 			c.History("插入数据错误", "")
 		} else {
 			c.History("插入数据成功", "/admin/category.html")
@@ -251,6 +250,7 @@ func (c *AdminController) CategorySave() {
 		}
 		category.Id = intId
 		if _, err := c.o.Update(&category); err != nil {
+			fmt.Println(err)
 			c.History("更新数据出错", "")
 		} else {
 			c.History("插入数据成功", "/admin/category.html")
