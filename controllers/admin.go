@@ -237,6 +237,7 @@ func (c *AdminController) CategorySave() {
 	category.Name = name
 	if id == "" {
 		if _, err := c.o.Insert(&category); err != nil {
+			fmt.Println(err)
 			c.History("插入数据错误", "")
 		} else {
 			c.History("插入数据成功", "/admin/category.html")
