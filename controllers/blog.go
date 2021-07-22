@@ -63,7 +63,7 @@ func (c *BlogController) list()  {
 */
 func (c *BlogController) Home()  {
 	c.list()
-	c.Data["actionName"] = "首页"
+	c.Data["preTitle"] = "首页"
 	c.TplName= c.controllerName+"/home.html"
 }
 
