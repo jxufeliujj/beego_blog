@@ -4,7 +4,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"strings"
-	"github.com/Echosong/beego_blog/models"
+	"github.com/jxufeliujj/beego_blog/models"
 )
 
 type baseController struct {

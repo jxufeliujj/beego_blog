@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/Echosong/beego_blog/models"
-	"github.com/Echosong/beego_blog/util"
+	"github.com/jxufeliujj/beego_blog/models"
+	"github.com/jxufeliujj/beego_blog/util"
 	"time"
 )
 
