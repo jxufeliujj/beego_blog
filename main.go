@@ -4,7 +4,7 @@ import (
 	_ "github.com/jxufeliujj/beego_blog/routers"
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/jxufeliujj/beego_blog/models"
+	_ "github.com/jxufeliujj/beego_blog/models"
 )
 
 
